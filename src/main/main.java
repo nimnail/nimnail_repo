@@ -22,6 +22,12 @@ public class main {
         City city2 = new City("Чикаго", 121.22);
         City city3 = new City("Вашингтон", 1111.11);
         City city4 = new City("Зеленоград", 111.12);
+        /**
+         * убери эти значения
+         * сделай везде пока что 1000
+         * потом уже придумаем
+         * когда сделаешь юнитов
+         */
 
         Country Russia = new Country(city, "Россия");
         Country USA = new Country(city3, "США");

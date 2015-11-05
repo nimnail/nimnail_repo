@@ -1,7 +1,7 @@
 package objects;
 
 /**
- * Created by Наиль on 29.10.2015.
+ *
  */
 
 import java.util.ArrayList;
@@ -51,7 +51,7 @@ public class Barracks {
     }
 
     public void upLevel(int upLevel){
-        this.level = this.level - upLevel;
+        this.level = this.level + upLevel;
     }
 
     public void lowLevel(int lowLevel){

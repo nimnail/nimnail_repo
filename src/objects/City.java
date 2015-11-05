@@ -69,7 +69,9 @@ public class City {
     public Barracks getBarracks() {
         return barracks;
     }
-
+    /**
+     * население и золото должны быть инициализированы в разных методах!
+     */
     public int getRandom(){
         Random random = new Random();
         int newGold = random.nextInt(200) + 1;
@@ -79,6 +81,6 @@ public class City {
             this.population = newGold * 2;
         }
         return newGold;
-        }
+    }
 
 }
