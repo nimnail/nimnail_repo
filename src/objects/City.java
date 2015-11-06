@@ -18,21 +18,15 @@ public class City {
     private String name;
     private int population;
     private int gold;
-    private double area;
+    private double area = 1000;
     private Barracks barracks = new Barracks();
     private Country myCountry;
 
     //Конструкторы
-    public City() {
-
-    }
     public City(String name) {
         this.name = name;
-    }
-    public City(String name, double area) {
-        this.name = name;
-        this.area = area;
-        this.gold = getRandom();
+        this.gold = getRandom(200);
+        definePopulation();
     }
 
     //СетерыГетеры
@@ -69,18 +63,18 @@ public class City {
     public Barracks getBarracks() {
         return barracks;
     }
-    /**
-     * население и золото должны быть инициализированы в разных методах!
-     */
-    public int getRandom(){
+
+    public int getRandom(int i){
         Random random = new Random();
-        int newGold = random.nextInt(200) + 1;
-        if (newGold > 150) {
-            this.population = newGold * 5;
+        return random.nextInt(i) + 1;
+    }
+
+    public void definePopulation(){
+        if (this.gold > 150) {
+            this.population = this.gold * 5;
         } else {
-            this.population = newGold * 2;
+            this.population = this.gold * 2;
         }
-        return newGold;
     }
 
 }
