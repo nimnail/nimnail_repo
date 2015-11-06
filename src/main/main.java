@@ -12,16 +12,19 @@ public class main {
 
         City city = new City("Москва");
         City city1 = new City("Зеленоград");
-        City city2 = new City("Чикаго");
+        City city2 = new City("Химки");
         City city3 = new City("Вашингтон");
-        City city4 = new City("Зеленоград");
+        City city4 = new City("Чикаго");
+        City city5 = new City("НьюМью");
 
         Country Russia = new Country(city, "Россия");
+        Country USA = new Country(city3, "Вашингтон");
 
         Russia.addCity(city1);
-        Russia.addCity(city2);
         Russia.addCity(city3);
-//        Russia.addCity(city4);
+
+        USA.addCity(city4);
+        USA.addCity(city5);
 
 //        System.out.println(city1.getMyCountry().getName());
 
@@ -30,7 +33,7 @@ public class main {
                 + city2.getPopulation()+ "\n" + city3.getGold() + " "
                 + city3.getPopulation());
 
-//        USA.addCity(city2);
+
 
 //        barracks.printAllBarracks();
 
@@ -43,5 +46,6 @@ public class main {
 //        Russia.deleteCity(city2);
 
         Russia.showInfoCountry();
+        USA.showInfoCountry();
     }
 }

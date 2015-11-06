@@ -22,10 +22,12 @@ public class City {
     private Barracks barracks = new Barracks();
     private Country myCountry;
 
+    final int numForRandom = 200;
+
     //Конструкторы
     public City(String name) {
         this.name = name;
-        this.gold = getRandom(200);
+        this.gold = getRandom(numForRandom);
         definePopulation();
     }
 
